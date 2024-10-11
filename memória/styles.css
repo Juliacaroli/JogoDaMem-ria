@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    perspective: 1000px; /* Adiciona perspectiva para a animação */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s; /* Adiciona a transição */
+    transform-style: preserve-3d; /* Preserva a 3D ao girar */
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg); /* Gira a carta */
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta a face de trás */
+}
+
+.card-face.front {
+    background-color: #5b6ec4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-face.back {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board.game1 {
+    display: grid;
+    grid-template-columns: repeat(8, 100px); /* 5 cartas por linha */
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+
+.board.game2 {
+    display: grid;
+    grid-template-columns: repeat(5, 100px); /* 5 cartas por linha */
+    grid-gap: 10px;
+    margin: 20px auto;
+}

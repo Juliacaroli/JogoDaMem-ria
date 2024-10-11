@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha um Jogo da Memória</h1>
+        <div class="options">
+            <button onclick="startGame(1)">Jogo 1</button>
+            <button onclick="startGame(2)">Jogo 2</button>
+        </div>
+        <div id="game" class="game" style="display: none;">
+            <div class="board" id="board"></div>
+            <button onclick="resetGame()">Reiniciar Jogo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
